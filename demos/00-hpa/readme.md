@@ -1,9 +1,8 @@
 A bit from kubernetes.io
 
+Instruction to install metric server are at https://dev.to/docker/enable-kubernetes-metrics-server-on-docker-desktop-5434
 ```
-kubectx AKS
-
-kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
+kubectl apply -f components.yaml
 kubectl apply -f https://k8s.io/examples/application/php-apache.yaml
 
 ```
@@ -28,7 +27,7 @@ On Left:
 kubectl get hpa -w
 ```
 
-Target should be above 50%
+Target should be above 50%. Wait 1-3 minutes
 
 ```
 kubectl get deployment php-apache
